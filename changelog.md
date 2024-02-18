@@ -1,5 +1,14 @@
 # PDFix Desktop changelog
 
+## [1.5.1] - 2024-02-16
+
+### HTML Conversion
+- Conversion to HTML from PDF Tags (derivation) encoding fix
+
+### General
+- [Integrated PDFix SDK 7.3.1](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#731---2024-02-16)
+- Performance and stability improvements
+
 ## [1.5.0] - 2024-01-23
 
 ### Accessibility, Tagging, and Validation
