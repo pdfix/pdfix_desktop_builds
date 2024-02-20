@@ -4,6 +4,7 @@
 
 ### Accessibility, Tagging, and Validation
 - Changed Copy/Paste Tag shortcuts
+- Save Validation results
 
 ### HTML Conversion
 - Conversion to HTML from PDF Tags (derivation) encoding fix
