@@ -2,6 +2,9 @@
 
 ## [1.5.1] - 2024-02-16
 
+### Accessibility, Tagging, and Validation
+- Changed Copy/Paste Tag shortcuts
+
 ### HTML Conversion
 - Conversion to HTML from PDF Tags (derivation) encoding fix
 
