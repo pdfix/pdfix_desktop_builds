@@ -1,5 +1,19 @@
 # PDFix Desktop changelog
 
+## New Features & Updates
+
+## [1.5.2] - 2024-02-27
+
+### Accessibility, Tagging, and Validation
+- Enhanced character Unicode mapping
+
+### HTML Conversion
+- Append custom HTML to the end of the body
+
+### General
+- [Integrated PDFix SDK 7.3.2](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#732---2024-02-27)
+- Performance and stability improvements
+
 ## [1.5.1] - 2024-02-16
 
 ### Accessibility, Tagging, and Validation
