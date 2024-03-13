@@ -2,6 +2,16 @@
 
 ## New Features & Updates
 
+## [1.5.3] - 2024-03-13
+
+### Accessibility, Tagging, and Validation
+- Unwanted table columns created with text filling when tagging as table
+- Duplicated MCID created when tagging
+
+### General
+- [Integrated PDFix SDK 7.3.3](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#733---2024-03-13)
+- Performance and stability improvements
+
 ## [1.5.2] - 2024-02-27
 
 ### Accessibility, Tagging, and Validation
