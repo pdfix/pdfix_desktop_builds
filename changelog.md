@@ -2,6 +2,25 @@
 
 ## New Features & Updates
 
+## [2.0.0] - 2024-05-02
+
+### Accessibility, Tagging, and Validation
+- Command categories
+- New remediation commands for document and batch {see PDFix SDK update}
+- Save validation report to HTML
+- New customizable Make Accessible and Autofix commands
+
+### User Interface
+- Quick access toolbar
+- Unified command dialogs
+- Font pane sorting
+- Shortcut search in Preferences
+
+### General
+- New MacOS native support for ARM architecture (M1, M2, M3 chip)
+- [Integrated PDFix SDK 8.0.1](https://github.com/pdfix/pdfix_sdk_builds/releases/tag/8.0.1)
+- Performance and stability improvements
+
 ## [1.5.3] - 2024-03-13
 
 ### Accessibility, Tagging, and Validation
