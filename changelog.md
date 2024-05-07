@@ -6,7 +6,7 @@
 
 ### Accessibility, Tagging, and Validation
 - Command categories
-- New remediation commands for document and batch {see PDFix SDK update}
+- New remediation commands for document and batch {see PDFix SDK change log}
 - Save validation report to HTML
 - New customizable Make Accessible and Autofix commands
 
