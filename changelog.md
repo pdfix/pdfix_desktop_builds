@@ -18,7 +18,7 @@
 
 ### General
 - New MacOS native support for ARM architecture (M1, M2, M3 chip)
-- [Integrated PDFix SDK 8.0.1](https://github.com/pdfix/pdfix_sdk_builds/releases/tag/8.0.1)
+- [Integrated PDFix SDK 8.0.1](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#801---2024-05-03)
 - Performance and stability improvements
 
 ## [1.5.3] - 2024-03-13
