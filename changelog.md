@@ -2,6 +2,19 @@
 
 ## New Features & Updates
 
+## [2.0.1] - 2024-05-11
+
+### Accessibility and Tagging
+- Updated default tagset for PDF version 1.3 and lower
+- Batch commands management update
+
+### User Interface
+- Fixed Quick Access Tag As... buttons hidden after the update
+
+### General
+- Fixed MacOS installer does start or check for update
+
+
 ## [2.0.0] - 2024-05-02
 
 ### Accessibility, Tagging, and Validation
