@@ -37,7 +37,7 @@
 ## [1.5.3] - 2024-03-13
 
 ### Accessibility, Tagging, and Validation
-- Unwanted table columns created with text filling when tagging as table
+- Fixed unwanted table columns created with text filling when tagging as table
 - Duplicated MCID created when tagging
 
 ### General
