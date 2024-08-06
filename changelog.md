@@ -2,6 +2,22 @@
 
 ## New Features & Updates
 
+## [2.1.0] - 2024-08-07
+
+### Accessibility and Tagging
+- New Quick Fix action for automated fixing of common minor accessibility issues
+- Updated Delete Tags action with option to mode children to parent structure element
+- Fixed generating duplicate MCID and invalid unicode encoding table
+- Fixed lost content when flattening Form XObjects
+
+### User Interface
+- Validation results related to specific pages organized by pages
+- Fixed Quick Access Tag As... buttons hidden after the update
+
+### General
+- Native support for macOS Silicon chip architecture
+
+
 ## [2.0.1] - 2024-05-11
 
 ### Accessibility and Tagging
