@@ -2,6 +2,39 @@
 
 ## New Features & Updates
 
+## [2.2.0] - 2024-10-30
+
+### Accessibility and Tagging
+- **Action Manager with Pipeline Runner Integration**  
+  - Offers essential actions for editing PDF tags and metadata.  
+  - Supports external actions using pre-configured Docker images for tasks such as OCR, HTML to PDF, Alt Text Generation, Language Detection, and more.  
+  - Enables the creation of customizable action pipelines for batch processing on selected documents or entire folders.  
+
+- **Template-Based Actions Configuration**  
+  - Streamline workflows by targeting tags and other PDF objects with predefined templates.  
+
+- **Tag Tool Enhancements**  
+  - Simplifies the management of table headers and data cell associations.  
+  - Provides options to select and modify tag properties and attributes.  
+
+- **Professional Version Upgrades**  
+  - Unlock advanced workflows with custom actions and pipeline capabilities.  
+
+## User Interface
+- **Tabbed Document Management**  
+  - Enhances organization and navigation across multiple documents for a more efficient workflow.  
+
+- **New Toolbars**  
+  - Provides quick access to frequently used features, streamlining the user experience.  
+
+## General Updates
+- **Backend Enhancements**  
+  - Integrated with PDFix SDK 8.3 for improved functionality.  
+  - Updated to VeraPDF v1.25 for enhanced PDF/UA compliance.  
+
+- **Performance and Stability Improvements**  
+  - Continuous enhancements for a more stable and responsive experience. 
+
 ## [2.1.0] - 2024-08-07
 
 ### Accessibility and Tagging
