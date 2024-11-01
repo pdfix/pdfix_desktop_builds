@@ -2,6 +2,13 @@
 
 ## New Features & Updates
 
+## [2.2.1] - 2024-11-01
+
+### General Updates
+- **Backend Enhancements**  
+  - Integrated with PDFix SDK 8.3.1 for improved functionality.  
+- **Performance and Stability Improvements**
+
 ## [2.2.0] - 2024-10-30
 
 ### Accessibility and Tagging
