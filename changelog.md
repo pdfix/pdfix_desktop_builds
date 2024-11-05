@@ -2,11 +2,21 @@
 
 ## New Features & Updates
 
+## [2.2.2] - 2024-11-05
+
+### User Interface
+- **New languages for user interface**
+  - Dutch, Dansk, Norsk, Svenska
+
+### General Updates
+- **Backend Enhancements**  
+  - Integrated with [PDFix SDK 8.3.1](https://pdfix.net/support/changelog/)
+
 ## [2.2.1] - 2024-11-01
 
 ### General Updates
 - **Backend Enhancements**  
-  - Integrated with PDFix SDK 8.3.1 for improved functionality.  
+  - Integrated with PDFix SDK 8.3.1 
 - **Performance and Stability Improvements**
 
 ## [2.2.0] - 2024-10-30
