@@ -16,7 +16,6 @@
 
 ### General Updates
 - **Backend Enhancements**  
-  - Integrated with PDFix SDK 8.3.1 
 - **Performance and Stability Improvements**
 
 ## [2.2.0] - 2024-10-30
