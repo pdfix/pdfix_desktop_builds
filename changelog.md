@@ -2,6 +2,36 @@
 
 ## New Features & Updates
 
+## [2.3.0] - 2024-11-22
+
+## Accessibility and Tagging
+- **New commands for remediation**
+  - Clone Form XObjects (tagged and untagged)
+
+## User Interface
+- **New languages for user interface**
+  - Čeština, Español, Suomi, Français, Magyar, Italiano, 한국어 (Hangul), 中文 (简体)
+- **Shortcuts**
+  - Updated custom shortcuts on macOS
+
+## PDF/UA Validation
+- **veraPDF** update to 1.27
+
+## External Actions
+- **Support for external docker-based actions**
+  - [pdfix/verapdf-validation:v0.3.0](https://hub.docker.com/r/pdfix/verapdf-validation)
+  - [pdfix/arlington-pdf-model:v0.3.0](https://hub.docker.com/r/pdfix/arlington-pdf-model)
+  - [pdfix/html-to-pdf:0.4.2](https://hub.docker.com/r/pdfix/html-to-pdf)
+  - [pdfix/alt-text-openai:v0.6.2](https://hub.docker.com/r/pdfix/alt-text-openai)
+  - [pdfix/ocr-tesseract:v0.4.4](https://hub.docker.com/r/pdfix/ocr-tesseract)
+  - [pdfix/alt-text-vision:v0.2.2](https://hub.docker.com/r/pdfix/alt-text-vision)
+  - [pdfix/lang-detect:v0.4.3](https://hub.docker.com/r/pdfix/lang-detect)
+
+## General Updates
+- **Backend Enhancements**  
+  - Integrated [PDFix SDK 8.4.0](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#840---2024-11-20)
+  - Performance and stability improvements
+  
 ## [2.2.2] - 2024-11-05
 
 ### User Interface
