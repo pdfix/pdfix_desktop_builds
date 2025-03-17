@@ -2,6 +2,40 @@
 
 ## New Features & Updates
 
+## [2.3.2] - 2025-03-14
+
+### User Interface
+- **Localization updates**
+
+### Backend and Batch Processing
+- **Fixed processing files with Unicode characters on Windows**
+
+### General Updates
+- **Integrated [PDFix SDK 8.5.0](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#850---2025-03-16)**
+  - Added support for updating invalid document metadata
+  - Fixed PDF-to-JSON export of text from structure elements, Base64 images, and annotations
+  - Fixed updating of the document modified flag after running the set_pdf_version action
+  - Fixed reloading of `PdePageMap` after a change in `PdfDocTemplate`
+  - Fixed `xmp:ModifyDate` format in metadata
+  - Fixed `remove_content_marks` action when removing invalid MCID in MCR structure elements
+  - Fixed soft/hard hyphenation tagging
+  - Fixed auto-tagging of text spans with annotations
+  - Updated subscript/superscript detection in layout recognition
+- **Performance and Stability improvements**    
+
+## [2.3.1] - 2024-11-26
+
+### User Interface
+- Minor UI updates 
+- Dutch language translation updates
+
+### External Actions
+- **Updated logging for executing external actions**
+  - View log file for each processed file
+
+### General Updates
+- **Backend Enhancements**    
+
 ## [2.3.0] - 2024-11-22
 
 ### Accessibility and Tagging
