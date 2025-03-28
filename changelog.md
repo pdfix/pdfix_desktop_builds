@@ -2,6 +2,14 @@
 
 ## New Features & Updates
 
+## [2.3.3] - 2025-03-28
+
+### General Updates
+- **Integrated [PDFix SDK 8.5.1](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#851---2025-03-28)**
+  - Fixed duplicate MCID generated in content with nested content marks
+  - Fixed missing tag name in BDC content mark in text content
+  - Enhanced precision in matching annotations with text content
+
 ## [2.3.2] - 2025-03-14
 
 ### User Interface
