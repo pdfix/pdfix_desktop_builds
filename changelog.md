@@ -2,6 +2,13 @@
 
 ## New Features & Updates
 
+## [2.3.4] - 2025-04-15
+
+### General Updates
+- **Integrated [PDFix SDK 8.5.3](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#853---2025-04-15)**
+  - Fixed tagging overlapping annotations over text content 
+  - Fixed embedding TrueType fonts containing non-ansi characters
+
 ## [2.3.3] - 2025-03-28
 
 ### General Updates
