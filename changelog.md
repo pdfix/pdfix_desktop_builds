@@ -1,4 +1,4 @@
-PDFix Desktop changelog
+# PDFix Desktop changelog
 
 ## New Features & Updates
 
