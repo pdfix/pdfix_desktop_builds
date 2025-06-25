@@ -2,6 +2,39 @@
 
 ## New Features & Updates
 
+## [2.4.0] - 2025-06-23
+
+### Template Configuration
+- Introduced object anchors for flexible object creation
+- Added dynamic object bounding box definition
+- Support for nested templates
+- Added support for mathematical functions in templates
+- Introduced Layout Recognition Debugger for advanced diagnostics
+
+### External Actions
+- Streamlined external action management
+- Added support for new external actions:
+  - Generate Alternate Text (Vision AI)
+  - HTML to PDF conversion
+  - Language detection
+  - OCR using Tesseract
+  - PDF Accessibility (OpenAI): Figure Alt Text, Table Summary, Formula MathML Associated Files
+  - PDF Accessibility (Paddle): Auto-tagging, Formula MathML Associated Files
+  - Arlington PDF syntax validation
+ 
+### Validation
+- Integrated veraPDF 1.29 for PDF/UA, WCAG validation
+
+### User Interface
+- Improved color contrast for better accessibility
+- Added template JSON syntax validation, object match highlighting, and debugging tools
+- Integrated in-app user notifications
+
+### General Updates
+- Native OS installers: Windows (MSI), macOS (DMG), Linux (RUN)
+- **Integrated [PDFix SDK 8.7.0](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#870---2025-04-20)**
+- Various performance and stability improvements
+
 ## [2.3.4] - 2025-04-15
 
 ### General Updates
