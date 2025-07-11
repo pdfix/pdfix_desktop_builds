@@ -2,6 +2,22 @@
 
 ## New Features & Updates
 
+## [2.4.1] - 2025-07-10
+
+### Accessibility 
+- Fixed failures when moving structure elements in the Tag tree
+- Document View actions hide unnecessary properties
+
+### Template Configuration
+- Message warning when opening old or incompatible templates
+
+### External Actions
+- Updated UX for external action management
+ 
+### General Updates
+- **Integrated [PDFix SDK 8.7.1](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#871---2025-07-10)**
+- Various performance, memory, and stability improvements
+
 ## [2.4.0] - 2025-06-23
 
 ### Template Configuration
