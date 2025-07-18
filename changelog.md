@@ -2,6 +2,27 @@
 
 ## New Features & Updates
 
+## [2.4.2] - 2025-07-18
+
+### Accessibility 
+- Added action to remove annotation data (such as Contents)
+
+### Template Configuration
+- Add Table as Initial Element uses relative coordinates for cells
+
+### External Actions
+- Fixed import of actions with deprecated parameters
+- Fixed issues with the execution of actions in the main application window
+- Search box in the Add Action window
+- Grayed files in the activity tab on Windows
+
+### User Interface
+- Consistent column widths in the new tabs in the main application window
+ 
+### General Updates
+- **Integrated [PDFix SDK 8.7.2](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#872---2025-07-18)**
+- Performance, memory, and stability improvements
+
 ## [2.4.1] - 2025-07-10
 
 ### Accessibility 
