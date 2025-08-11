@@ -5,17 +5,12 @@
 ## [2.4.3] - 2025-08-11
 
 ### Accessibility 
-- Added action **Set Content Color**
-  - Helps solve problems with the color contrast
-- Added action **Fix Page Orientation**
-  - To unify the page coordinate system with page orientation and rotation
-- Fixed splitting text objects when tagging selected text
-
-### Template Configuration
-- Add Table as Initial Element uses relative coordinates for cells
+- Added **Set Content Color** action — helps resolve issues with insufficient color contrast
+- Added *Fix Page Orientation* action — unifies the page coordinate system with the page orientation and rotation
+- Fixed an issue where text objects were split when tagging selected text
 
 ### External Actions
-- Added **Amazon Textract** layout recognition action to template creation
+- Added **Amazon Textract* layout recognition action for layout template creation
 
 ### User Interface
 - Various minor bug fixes
