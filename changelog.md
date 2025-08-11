@@ -2,6 +2,28 @@
 
 ## New Features & Updates
 
+## [2.4.3] - 2025-08-11
+
+### Accessibility 
+- Added action **Set Content Color**
+  - Helps solve problems with the color contrast
+- Added action **Fix Page Orientation**
+  - To unify the page coordinate system with page orientation and rotation
+- Fixed splitting text objects when tagging selected text
+
+### Template Configuration
+- Add Table as Initial Element uses relative coordinates for cells
+
+### External Actions
+- Added **Amazon Textract** layout recognition action to template creation
+
+### User Interface
+- Various minor bug fixes
+ 
+### General Updates
+- **Integrated [PDFix SDK 8.7.3](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#873---2025-08-11)**
+- Performance, memory, and stability improvements
+
 ## [2.4.2] - 2025-07-18
 
 ### Accessibility 
