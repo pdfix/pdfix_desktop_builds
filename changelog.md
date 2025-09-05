@@ -1,6 +1,23 @@
 # PDFix Desktop changelog
 
-## New Features & Updates
+## [2.4.4] - 2025-09-05
+
+### Accessibility 
+- Added **Set Tag Language** action — enables support for tagging multi-language documents
+
+### Template configuration
+- Fixed handling of boolean variables in the layout template pane
+
+### External Actions
+- Added access to *External Actions* from the main application window toolbar
+- Improved management of external actions and update notifications.
+
+### User Interface
+- Minor bug fixes and UX improvements
+ 
+### General Updates
+- Integrated **[PDFix SDK 8.7.4](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#874---2025-09-05)**
+- Improved performance, memory usage, and stability
 
 ## [2.4.3] - 2025-08-11
 
