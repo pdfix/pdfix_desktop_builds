@@ -1,5 +1,38 @@
 # PDFix Desktop changelog
 
+## [2.5.0] - 2025-10-09
+
+### User Interface  
+**More intuitive and powerful workspace for document preview and actions.**
+
+- **Main Application Window**
+  - Introduced document preview directly in the main window.
+  - Refactored *Run Action* dialog and *Activity* tab for better workflow visibility.
+- **Document View**
+  - Added new **Action Ribbon Toolbar** in the document window, including support for custom actions.  
+  - Refactored output handling for conversion and validation reports (improved saving and organization).  
+  - Added **tool buttons** for executing actions on selected content in document panes.  
+  - Fixed issues in *Tag Destinations* view and *Create Link to Destination* functionality.  
+- **Localization**
+  - General translation fixes and UI improvements for multiple languages.
+
+### Accessibility Actions  
+**New tools to ensure PDF/UA and accessibility compliance.**
+
+- Added **Document or Tags Language Detection** to identify missing or incorrect language attributes.  
+- Added **Fix Link Tag** action — repairs invalid link tags and defines correct destinations and zoom settings.  
+- Integrated new accessibility actions directly in the document window:
+  - **Arlington PDF Model** — validates internal PDF syntax.
+  - **Duplicate MCID Report** — detects duplicate marked content IDs.
+  - **VeraPDF Validation** — generates full PDF/UA compliance reports.
+
+### General Updates  
+**Core improvements and SDK integration for faster, more reliable performance.**
+
+- Integrated **PDFix SDK 8.7.5**  
+- Optimized **performance, memory usage, and stability** across all major operations.
+
+
 ## [2.4.4] - 2025-09-05
 
 ### Accessibility 
