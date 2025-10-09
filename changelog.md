@@ -22,7 +22,7 @@ A major release focused on a **modernized user interface**, **enhanced document 
 ### Accessibility Actions  
 **New tools to ensure PDF/UA and accessibility compliance.**
 
-- Added **Document or Tags Language Detection** to identify missing or incorrect language attributes.  
+- Added **Document, Tags, or Content Language Detection** to identify missing or incorrect language attributes.  
 - Added **Fix Link Tag** action — repairs invalid link tags and defines correct destinations and zoom settings.  
 - Integrated new accessibility actions directly in the document window:
   - **Arlington PDF Model** — validates internal PDF syntax.
