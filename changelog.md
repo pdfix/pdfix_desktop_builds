@@ -2,6 +2,9 @@
 
 ## [2.5.0] - 2025-10-09
 
+### Summary
+A major release focused on a **modernized user interface**, **enhanced document accessibility tools**, and **performance improvements** powered by **PDFix SDK 8.7.5**.
+
 ### User Interface  
 **More intuitive and powerful workspace for document preview and actions.**
 
