@@ -1,5 +1,13 @@
 # PDFix Desktop changelog
 
+## [2.5.1] - 2025-10-14
+
+### Summary
+Hotfix addressing issues with the cleanup and removal of empty tags after manual retagging.
+
+### General
+- Fixed an issue where empty tags were not correctly removed after retagging selected content in the Page View.
+
 ## [2.5.0] - 2025-10-09
 
 ### Summary
