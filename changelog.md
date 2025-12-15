@@ -1,5 +1,21 @@
 # PDFix Desktop changelog
 
+## [2.5.3] - 2025-12-15
+
+### Summary
+Minor update improving user experience and reliability in conversion workflows, navigation, and tag management.
+
+### User Interface
+- Fixed moving files between the tabs in the application window
+- Fixed loading action title
+
+### License Management
+- Fixed license deactivation when moving to a new device
+
+### General Updates
+- Updated to **PDFix SDK 8.7.7**
+- Optimized performance, memory usage, and stability across all major operations.
+
 ## [2.5.1] - 2025-10-14
 
 ### Summary
