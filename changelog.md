@@ -1,19 +1,20 @@
 # PDFix Desktop changelog
 
-## [2.5.3] - 2025-12-15
+## [2.5.2] - 2025-10-16
 
 ### Summary
 Minor update improving user experience and reliability in conversion workflows, navigation, and tag management.
 
-### User Interface
-- Fixed moving files between the tabs in the application window
-- Fixed loading action title
+### Manual Tagging
+- Fixed issue with deleting tags after tagging
+- Fixed crash occurring when *Tag As* action was canceled immediately after start
 
-### License Management
-- Fixed license deactivation when moving to a new device
+### User Interface
+- Opening of external links from the Conversion pane to correctly launch in an external web browser
+- Added **Previous / Next navigation** in Conversion View
 
 ### General Updates
-- Updated to **PDFix SDK 8.7.7**
+- Updated to **PDFix SDK 8.7.6**
 - Optimized performance, memory usage, and stability across all major operations.
 
 ## [2.5.1] - 2025-10-14
