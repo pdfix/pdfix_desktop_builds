@@ -1,5 +1,69 @@
 # PDFix Desktop changelog
 
+## [2.5.5] - 2026-04-29
+
+### Summary
+
+This release focuses on a more practical application workspace, stronger external tagging workflows, and more flexible action execution directly in Document View.
+
+- Improved usability and file handling in the Application Dashboard, including validation, preview, folder drag-and-drop, and clearer handling of opened files.
+- Added and improved external actions for document tagging and tagging template creation, including Docling-based AutoTag and Create Layout Template workflows.
+- Expanded custom action composition in Document View, including support for external actions, improved setup dialogs, and output handling into new tabs.
+
+### User Interface
+
+- Added validation preview in Application Dashboard
+- Added support for dragging and dropping folders into a tab
+- Added the Action pane and improved the action execution pane in Document View
+
+### Accessibility and Tagging
+
+- Added Add Child Tag action
+- Added Move Tag action
+- Added Move Up, Move Down, Level Up, Expand All, Collapse All, and Merge actions
+- Added Alternate and Actual Text fields in Content pane
+- Enabled artifact actions when tags are selected
+- Added Split Content action
+- Added Set List Numbering action
+- Added automated fixes for validation errors
+- Fixed link creation errors
+- Fixed image tagging in Form XObject substructures
+
+### Actions and Workflows
+
+- Added Action pane in Document View
+- Improved Action setup dialogs
+- Added an option to save outputs into a new tab
+- Added support for external actions in Document View
+- Improved Custom Action editor ordering
+- Added support for copying and pasting actions as JSON
+- Improved batch progress and cancellation updates
+- Added notifications for new action packages
+
+### External Actions
+
+- Improved Create Layout Template (Docling) and AutoTag (Docling) actions to support lists, complex tables, and element parenting
+- Added a new external AutoTag (PDFix) action that uses layout templates and ensures backward compatibility by using the appropriate PDFix SDK version
+
+### Validation and veraPDF
+
+- Added Validation view in Application Dashboard
+- Added veraPDF check highlighting in Preview
+- Improved validation issue reporting
+- Improved validation/layout integration
+- Improved PAC and clause view switching
+
+### Templates and Layout Recognition
+
+- Improved Template pane loading
+- Added template aliases
+- Improved disabled template item behavior
+
+### Performance and Stability
+
+- Performance and stability improvements
+- Threading and batch cancellation improvements
+
 ## [2.5.3] – 2025-12-18
 
 ### Summary
