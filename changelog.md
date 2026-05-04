@@ -1,6 +1,6 @@
 # PDFix Desktop changelog
 
-## [2.5.5] - 2026-04-29
+## [3.0.0] - 2026-05-04
 
 ### Summary
 
