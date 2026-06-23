@@ -42,7 +42,6 @@ This release focuses on stronger accessibility tagging workflows, improved font 
 - Updated veraPDF to 1.30.2
 - Fixed incorrect category in Validation Category View
 - Fixed missing veraPDF errors in Desktop validation results
-- Fixed veraPDF JAR bundling into the app package
 
 ### Templates and Layout Recognition
 
@@ -53,7 +52,6 @@ This release focuses on stronger accessibility tagging workflows, improved font 
 - Improved deep Struct Tree loading with lazy fetch and batched MCID text scanning
 - Added indexed child lookup to avoid expensive scans after tag moves
 - Fixed Fonts pane reload after deleting font entries
-- Fixed Fonts pane reload after deleting page content
 
 ## [3.0.0] - 2026-05-04
 
