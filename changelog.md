@@ -1,5 +1,60 @@
 # PDFix Desktop changelog
 
+## [3.1.0] - 2026-06-23
+
+### Summary
+
+This release focuses on stronger accessibility tagging workflows, improved font and validation tooling, and better stability on large structure trees.
+
+- Added new tagging and font actions, including Set Unicode for Font Charcode, Fix Invalid Elements, Set Annotation Flag, Delete and Artifact, and List Numbering Details.
+- Improved veraPDF integration and validation reporting, including an update to veraPDF 1.30.1 and showing previously hidden validation errors.
+- Fixed tag and content ordering, retag cleanup, font pane reloads, and freezes in large document structure trees.
+
+### User Interface
+
+- Added Charcode column in Font Unicode Mapping view
+- Fixed Custom Action dialog sizing in New and Edit mode
+- Improved accessible colors
+- Improved Fonts pane reload after document notifications
+
+### Accessibility and Tagging
+
+- Added Set Unicode for Font Charcode action
+- Added support for expanding all selected tags
+- Added Fix Invalid Elements action
+- Added Set Annotation Flag action
+- Added Delete and Artifact action in Struct Tree
+- Added List Numbering Details widget in Tag Tree
+- Fixed Find Annotation from Selection
+- Fixed incorrect tag order after moving tags in Tag pane
+- Fixed item ordering when moving content in Content pane
+- Fixed Fix Content Marks action behavior
+- Fixed empty tags left after retagging
+
+### Actions and Workflows
+
+- Registered Set Unicode for Font Charcode in action categorization and protection
+- Registered Fix Invalid Elements in action categorization and protection
+- Registered Set Annotation Flag in action UI, action categorization, and protection
+
+### Validation and veraPDF
+
+- Updated veraPDF to 1.30.2
+- Fixed incorrect category in Validation Category View
+- Fixed missing veraPDF errors in Desktop validation results
+- Fixed veraPDF JAR bundling into the app package
+
+### Templates and Layout Recognition
+
+- Added `font_update` support to templates for font actions
+
+### Performance and Stability
+
+- Improved deep Struct Tree loading with lazy fetch and batched MCID text scanning
+- Added indexed child lookup to avoid expensive scans after tag moves
+- Fixed Fonts pane reload after deleting font entries
+- Fixed Fonts pane reload after deleting page content
+
 ## [3.0.0] - 2026-05-04
 
 ### Summary
