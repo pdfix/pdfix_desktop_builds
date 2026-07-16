@@ -1,5 +1,33 @@
 # PDFix Desktop changelog
 
+## [3.1.1] - 2026-07-16
+
+### Summary
+
+Minor update focused on more reliable action and validation error reporting, plus core SDK fixes for Make Accessible.
+
+- Improved reporting of failed actions and veraPDF single-process error messages.
+- Fixed parsing of pipeline STATUS JSON when output is mixed with error messages.
+- Updated to PDFix SDK 9.1.1, including a Make Accessible fix for mirrored text with negative horizontal scale.
+
+### Actions and Workflows
+
+- Fixed actions incorrectly reported as failed when the process exit code is non-zero
+- Fixed loading of pipeline STATUS JSON when output is mixed with error messages
+
+### Validation and veraPDF
+
+- Updated veraPDF validation action to v1.2.2
+- Added all veraPDF single-process error messages
+
+### Accessibility and Tagging
+
+- Fixed Make Accessible mirroring text on the page when horizontal scale is negative
+
+### General Updates
+
+- Updated to [PDFix SDK 9.1.1](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#911---2026-07-16)
+
 ## [3.1.0] - 2026-06-23
 
 ### Summary
