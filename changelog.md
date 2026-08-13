@@ -1,5 +1,48 @@
 # PDFix Desktop changelog
 
+## [3.2.0] - 2026-08-13
+
+### Summary
+
+This release focuses on new tagging and form-font actions, clearer template editing, and more reliable Windows licensing.
+
+### User Interface
+
+- Fixed false unsaved-changes prompt when editing template values
+
+### Accessibility and Tagging
+
+- Added Merge Tags action
+- Added Fix Fonts for Form Filling action
+- Fixed continuous table tagging across pages
+- Fixed graphic table detection
+- Fixed Fix Content Marks removing valid Form XObject MCIDs with Remove Invalid MCID
+
+### Actions and Workflows
+
+- Registered Merge Tags in action categorization and protection
+- Registered Fix Fonts for Form Filling in action UI, action categorization, and protection
+- Fixed AutoTag Preflight — shown in the action; skipped when a template is set
+
+### Templates and Layout Recognition
+
+- Added `tag_neighbours` template function for Merge Tags pair rules (cross-page, Note chains)
+- Added `object_num` on structure tags to identify associated page objects
+- Added template keyword aliases for Tag Neighbours, Initial Element Expand Overlap, Is Standard Tag, RD Overlap Min Ratio, and Split Filling
+
+### License Management
+
+- Fixed Device ID generation failure using WMI on Windows
+
+### Performance and Stability
+
+- Improved action execution performance
+
+### General Updates
+
+- Updated to [PDFix SDK 9.2.0](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#920---2026-08-13)
+- Fixed Catalog XMP metadata wrapping in xpacket
+
 ## [3.1.1] - 2026-07-16
 
 ### Summary
