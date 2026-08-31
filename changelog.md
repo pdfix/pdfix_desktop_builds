@@ -1,5 +1,38 @@
 # PDFix Desktop changelog
 
+## [3.3.0] - 2026-08-29
+
+### Summary
+
+Minor update focused on more reliable Tag and Content pane editing, plus core SDK fixes for PDF/UA metadata, PDF/A save, and tagging actions.
+
+### User Interface
+
+- Fixed Shift+arrow multi-select in tree views on macOS
+- Fixed deselecting items when holding Shift while navigating tags at the same level
+
+### Accessibility and Tagging
+
+- Fixed loading content for tags that span multiple pages
+- Fixed Move Child leaving a page reference on an ancestor instead of the direct parent of moved content
+- Fixed Fix Invalid Elements treating page marked-content kids as orphans
+- Fixed Remove Invalid MCID missing page marks
+
+### Actions and Workflows
+
+- Fixed Set Annotation Contents skipping on-page link annotations with a zero-size rectangle
+
+### Metadata and Document Information
+
+- Fixed Set PDF/UA and Fix Metadata wiping existing properties when XMP Metadata is UTF-16 or UTF-32
+- Fixed saving PDF/A without object streams or cross-reference streams
+- Fixed preserving compact XMP attributes, writing ISO 8601 dates, and declaring the pdfuaid extension schema when setting PDF/UA
+- Fixed Dublin Core text properties being wrapped as a bag instead of a single value
+
+### General Updates
+
+- Updated to [PDFix SDK 9.3.0](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#930---2026-08-29)
+
 ## [3.2.0] - 2026-08-13
 
 ### Summary
