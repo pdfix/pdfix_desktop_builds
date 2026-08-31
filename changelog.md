@@ -1,6 +1,6 @@
 # PDFix Desktop changelog
 
-## [3.3.0] - 2026-08-29
+## [3.3.0] - 2026-08-31
 
 ### Summary
 
