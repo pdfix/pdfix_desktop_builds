@@ -1,5 +1,166 @@
 # PDFix Desktop changelog
 
+# PDFix Desktop
+
+## [4.0.0] - 2026-11-18
+
+### Highlights
+
+PDFix Desktop 4.0 brings full support for PDF 2.0 and PDF/UA-2, a workspace you can arrange the way you like, and new ways to see your document the way assistive technology does. A new validation score shows how much accessibility work is left, and large tagged documents now save and edit noticeably faster.
+
+- **Arrange your workspace.** Move, tab, and float panes, pick a named theme, and scale the interface independently of your system settings.
+- **See what screen-reader users experience.** The new Screen Reader view in the Tags pane and the Reading view for HTML output show your document's structure the way assistive technology reads it.
+- **Know how much work is left.** Validation automatically checks against the PDF/UA version declared in the file, and the new validation score estimates the remaining effort. PDF/UA compliance itself is still a clear Pass or Fail.
+- **New conversion and tagging tools.** Convert to Markdown and EPUB, tag text with search patterns, wrap and repair tags, split and insert pages, and fix PDF/UA-2 issues with dedicated actions.
+- **Faster, safer saving.** Incremental save, faster saving of large tagged files, and a progress bar with Cancel for long saves.
+- **Stay up to date.** PDFix Desktop can now update itself from within the app.
+
+### Workspace and User Interface
+
+**New**
+- Move, tab, and float panes in both App View and Document View. Use Reset Layout to restore the default arrangement at any time.
+- Choose from named themes and set the interface scale separately from your system.
+- A new status bar shows your license, document security, PDF version, and the PDF standards the file claims to meet.
+- Reading view: open an easy-to-read HTML version of your document directly from Document View, with a table of contents and a screen-reader-style view of the tag structure. You can set it as your default in Preferences.
+- Search in HTML and Reading view with the same Ctrl+F shortcut as in the PDF view. The Find panel stays open while you work.
+- Find Action is now a dialog under Find, with settings, navigation, and helpful tooltips.
+- The action picker is easier to use: search, browse by category, mark favorites, and drag actions straight onto the ribbon.
+- The Action pane now works as a draft editor, consistent with Edit and New, and is available from the ribbon, menus, and import.
+- A quality bar in App View and Document View shows the validation score at a glance. Click it to see a summary.
+- An untagged document now shows a helpful empty state in the Tags pane instead of a blank pane.
+- An empty batch now shows a short introduction, a drop area, and an Add Files button.
+- File batches appear in a navigation panel on the left, and column widths stay aligned across batches.
+- Set a default output file suffix from the Dashboard.
+- PDFix Desktop can now update itself. An update button appears in App View, and beta builds check for updates automatically.
+
+**Fixed**
+- New batches now use the default columns set on the Dashboard.
+- The security status is shown correctly when you open a document with the owner password and it also has a separate permissions password.
+- Fit Page no longer jumps when you click.
+- Pane highlights no longer shift when you resize the window in Fit Page or Fit Width.
+- The Screen Reader view no longer flickers when you use Expand All or when the layout changes.
+- Selecting items in tree views now works correctly on macOS.
+- Drop-down lists now work correctly on the latest macOS versions.
+- Changing the theme no longer marks your layout template as modified.
+- Pipeline progress messages no longer show garbled characters.
+- Property editors no longer apply changes while you are still typing or when you use Save As. Keyboard shortcuts now keep working after you save in Document View.
+- After you hide the Action pane, you can bring it back from the More menu.
+- Help icons in menus now keep the correct size.
+- In shortcut preferences, clicking a row now selects the whole row.
+- The text cursor no longer gets stuck on the HTML view ribbon.
+- Save As now opens in the last folder you used.
+- Double-clicking in the action picker no longer selects several actions.
+
+### Accessibility and Tagging
+
+**New**
+- Screen Reader view in the Tags pane: see your tags as nested boxes, with table spans, image previews, and role mapping, and rearrange or rename tags with drag and drop.
+- Edit PDF 2.0 namespaces in the Tags pane and in actions.
+- Set or clear a link target that points to a structure element (GoTo structure destination) from the Actions pane or the clipboard.
+- **Tag Text:** find text with a search pattern (regular expression) and tag every match, for example as Span, Em, Strong, or your own tag type.
+- **Wrap Tags:** add a new parent tag around every tag that matches your criteria.
+- **Fix Tag Tree:** repair broken links between tags and page content, keep content names in sync with tag types, and rebuild the internal structure index.
+- **Tag as TOC:** recognize and tag a table of contents, including tables of contents laid out with title and page-number columns.
+- When you tag content that already belongs to a tag, the new tag is placed inside that existing tag.
+- **Split Pages:** split a document by page numbers, tags, or content. Each resulting file keeps its PDF/UA identification.
+- **Insert Pages:** after you insert pages, Document View fully refreshes so the page count, thumbnails, and page view stay accurate.
+- **Update Form XObjects:** give each placement of a reusable graphic its own copy, so you can tag each one separately. You can also copy its resources and mark the graphic as atomic.
+- **Remove Content Properties:** clear alternate text, actual text, language, or abbreviation expansions from page content.
+- Select, tag, and highlight repeated graphics (Form XObjects) individually, including graphics that come from annotations.
+
+**Fixed**
+- Find Tag from Selection now scrolls to the right place in Screen Reader view.
+- Spaces are no longer cut off in the Content pane.
+- After you create a span, selection jumps to the parent paragraph as expected.
+- Tagging no longer removes transparency from page content.
+- Tag As now works when the selected object is a graphic (Form XObject) that carries the content reference.
+- Tables whose rows continue across a page break are now handled correctly.
+- Set Content Color no longer removes the lines that separate table rows and columns.
+- The Hand tool now follows PDF 2.0 structure destinations first when you click a link.
+
+**Removed**
+- Fix Invalid Elements has been removed. Use Fix Tag Tree instead.
+
+### Actions and Workflows
+
+**New**
+- Run custom actions on just the current selection.
+- Export and import an action together with its presets, so you can share complete workflows.
+- Create your own action category directly in the action picker.
+- Rename individual steps inside a custom compound action.
+- Add conditions to individual steps of a custom action, so a step runs only when needed.
+- Convert PDF to Markdown and PDF to EPUB.
+- Better HTML, Markdown, and EPUB output for lists, tables of contents, forms, and figures.
+- Untagged documents now convert to responsive HTML instead of producing empty output.
+- New actions that fix PDF/UA-2 issues: descriptions for attached files, file-attachment relationships, caption position, private-use characters in tags and annotations, rich text in form fields, footnotes and endnotes, table-of-contents references, structure link targets, MathML for formulas, and showing the document title in the window title bar.
+- Convert Word documents to PDF.
+- Move files to the Trash directly from App View, also with Ctrl+Delete.
+- All new actions are included in the action categories and in action protection.
+
+**Fixed**
+- Converting to HTML, JSON, or EPUB from Document View now asks where to save the result.
+- You can now delete a custom action that is marked as a favorite.
+- Custom actions can now be renamed in Document View.
+- Error messages are clearer when an action fails on a secured document.
+- You can now cancel queued batch jobs in App View.
+- Validation is offered only for files that are not currently being processed.
+- AutoTag Preflight stays visible and enabled when AutoTag runs with a document template.
+- Closing the dialog now cancels a conversion in Document View.
+- In batches, output from external actions is no longer overwritten, and pipeline reports stay readable.
+- Move to Trash now works on Windows even when the PDF is open in preview, and asks for confirmation first.
+- Removed actions are also removed from the quick-access ribbon.
+- Deleting the last step no longer resets your draft in the Action pane.
+- Save to is now shown for the selected custom step.
+
+### Validation
+
+**New**
+- Validation now checks against the PDF/UA version declared in the document by default, and that choice stays selected on the ribbon.
+- **Validation score:** see how much accessibility work is left, based on the number and kinds of remaining issues. You can see it as a quality bar in the file list and on the open document, or switch to a simple Pass / Fail view. PDF/UA compliance itself remains Pass or Fail.
+- Create your own validation scores in Settings → Validation → Validation score. Set a weight for each rule (weight 0 ignores the rule), adjust sensitivity, and import or export your settings.
+- Guidance overlays and field display options help you understand and fix validation issues in context.
+- veraPDF 1.30.4 is now built in, so no separate installation is needed. It includes a PDF Accessibility profile that also checks WCAG color contrast.
+- Revalidate with the profile you are already using. Its name is shown on the status bar.
+- The veraPDF version and license are now listed in About.
+- The validation action is updated to version 1.4.2 and includes the PDF Accessibility profile.
+
+**Fixed**
+- MathML rules show the correct formula icon.
+- Font-related PDF/UA-2 errors show the correct action icons.
+- Document View stays responsive when you select thousands of validation results. Show Errors now selects results on the visible pages only and highlights the page you are previewing.
+- Validation annotations are found on the page correctly.
+- Pages appear in the correct order in the Validation panel.
+- Save As works when exporting a validation report.
+- Exporting a validation report now uses the correct default options.
+
+### Templates and Layout Recognition
+
+**New**
+- The template preview highlights on the page the tags and annotations that a template rule matches.
+- Edit the layout template directly as plain JSON.
+- Compare fill and stroke colors in template rules.
+- Turn underline and strikeout detection on or off separately.
+- Use page orientation (portrait or landscape) as a template condition.
+- Edit start and end bounding boxes.
+- The template Add menu is organized into submenus, including Graphics Table and Text Table.
+- Element colors in the page map now match the default tag colors.
+
+**Fixed**
+- Start and end bounding-box lines are highlighted correctly in the template.
+- AutoTag no longer removes role-map entries.
+- Missing aliases have been restored in the Document Layout Template.
+- Layout recognition data is cleaned up properly when you close a document.
+
+### General
+
+**New**
+- Incremental save: only your changes are written, which makes saving faster.
+- Long saves show progress and can be canceled.
+- Copy and paste object references in the Browser tree.
+- Save a stream object to a file from the Browser pane.
+- Faster saving and smoother editing of documents with large tag trees.
+- Built on [PDFix SDK 10.0.0](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#1000---2026-11-18).
+
 ## [3.3.0] - 2026-08-31
 
 ### Summary
