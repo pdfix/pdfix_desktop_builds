@@ -1,0 +1,116 @@
+name: Publish Desktop release (draft)
+
+# Creates a DRAFT release "PDFix Desktop <version>" with the installers and portable packages of a
+# finished Bitbucket build on dl.pdfix.net. The release notes stay empty - write them in the draft.
+# Never modifies an existing release or tag. Publishing the draft is a manual step in the GitHub UI.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Desktop version, e.g. 4.0.0 (the release tag, without v)"
+        required: true
+        type: string
+      branch:
+        description: "Full pdfixer branch name of the build, e.g. release/4.0.0"
+        required: true
+        type: string
+      commit:
+        description: "Full 40-char pdfixer commit of the build"
+        required: true
+        type: string
+      dry_run:
+        description: "Only download, create nothing on GitHub"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write # create the draft release
+
+concurrency:
+  group: publish-release-${{ inputs.version }}
+  cancel-in-progress: false
+
+jobs:
+  draft-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90 # about 1.8 GB of installers to download and upload
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      VERSION: ${{ inputs.version }}
+      BRANCH: ${{ inputs.branch }}
+      COMMIT: ${{ inputs.commit }}
+      DRY_RUN: ${{ inputs.dry_run }}
+      BASE_URL: https://dl.pdfix.net/builds/pdfix-desktop
+      TARGET_BRANCH: main # the tag is created on this branch when the draft is published
+    steps:
+      - name: Check inputs and existing releases
+        shell: bash
+        run: |
+          set -euo pipefail
+          die() { echo "::error::$*"; exit 1; }
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || die "version must look like 4.0.0, got '$VERSION'"
+          [[ "$COMMIT" =~ ^[0-9a-f]{40}$ ]] || die "commit must be the full 40-char lowercase SHA, got '$COMMIT'"
+          [[ "$BRANCH" =~ ^[A-Za-z0-9._/-]+$ ]] || die "invalid branch '$BRANCH'"
+
+          # `gh release list` includes drafts; a tag can also exist without a release.
+          tags="$(gh release list -R "$REPO" --limit 1000 --json tagName --jq '.[].tagName')"
+          if grep -qx -e "$VERSION" -e "v$VERSION" <<<"$tags"; then
+            die "a release for $VERSION already exists (draft or published). Delete it and its tag to redo it."
+          fi
+          if out="$(gh api "repos/$REPO/git/ref/tags/$VERSION" 2>&1)"; then
+            die "tag $VERSION already exists without a release. Delete the tag first."
+          elif ! grep -q "Not Found" <<<"$out"; then
+            die "cannot check whether tag $VERSION exists: $out"
+          fi
+
+      - name: Download build files
+        shell: bash
+        run: |
+          set -euo pipefail
+          c8="${COMMIT:0:8}"
+          src="$BASE_URL/$BRANCH/$COMMIT"
+          out="$RUNNER_TEMP/assets"
+          mkdir -p "$out"
+          files=(
+            "pdfix-desktop-v${VERSION}-${c8}-linux-x86_64.run"
+            "pdfix-desktop-v${VERSION}-${c8}-macos-arm64.dmg"
+            "pdfix-desktop-v${VERSION}-${c8}-macos-x86_64.dmg"
+            "pdfix-desktop-v${VERSION}-${c8}-windows-x86_64.msi"
+            "pdfix-desktop-portable-v${VERSION}-${c8}-linux-x86_64.tar.gz"
+            "pdfix-desktop-portable-v${VERSION}-${c8}-macos-arm64.zip"
+            "pdfix-desktop-portable-v${VERSION}-${c8}-macos-x86_64.zip"
+            "pdfix-desktop-portable-v${VERSION}-${c8}-windows-x86_64.zip"
+          )
+          echo "Source: $src"
+          for f in "${files[@]}"; do
+            echo "  download $f"
+            curl -fsSL --retry 3 --retry-delay 5 -o "$out/$f" "$src/$f" \
+              || { echo "::error::cannot download $src/$f - wrong version/branch/commit, or the build is not finished?"; exit 1; }
+            [[ -s "$out/$f" ]] || { echo "::error::downloaded file is empty: $f"; exit 1; }
+          done
+          {
+            echo "## Release $VERSION (dry run: $DRY_RUN)"
+            echo "Source: $src"
+            echo '```'
+            (cd "$out" && sha256sum -- * | sort -k2)
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create the draft release
+        if: ${{ !inputs.dry_run }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create "$VERSION" -R "$REPO" --draft --target "$TARGET_BRANCH" \
+            --title "PDFix Desktop $VERSION" --notes ""
+          # Remove only the draft this step created if an upload fails, never anything else.
+          if ! gh release upload "$VERSION" -R "$REPO" "$RUNNER_TEMP"/assets/*; then
+            echo "::error::upload failed - removing the draft this run created"
+            gh release delete "$VERSION" -R "$REPO" --yes || true
+            exit 1
+          fi
+          url="$(gh release view "$VERSION" -R "$REPO" --json url --jq .url)"
+          echo "Draft release: $url" | tee -a "$GITHUB_STEP_SUMMARY"
