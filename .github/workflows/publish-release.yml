@@ -104,8 +104,30 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Link to the '## [X.Y.Z] - <date>' section of changelog.md on main; without it, to the whole file.
+          changelog_url="https://github.com/$REPO/blob/$TARGET_BRANCH/changelog.md"
+          heading="$(gh api -H "Accept: application/vnd.github.raw" \
+            "repos/$REPO/contents/changelog.md?ref=$TARGET_BRANCH" | grep -m1 -F "## [$VERSION]" || true)"
+          if [[ -n "$heading" ]]; then
+            # GitHub heading anchor: lowercase, keep letters, digits, spaces, hyphens; spaces -> hyphens.
+            anchor="$(echo "${heading#\#\# }" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9 -]//g; s/ /-/g')"
+            changelog_url="$changelog_url#$anchor"
+          else
+            echo "::warning::changelog.md on $TARGET_BRANCH has no '## [$VERSION]' heading - the link points to the whole file"
+          fi
+          notes="$RUNNER_TEMP/notes.md"
+          cat > "$notes" <<EOF
+          # PDFix Desktop $VERSION
+
+          [Changelog]($changelog_url)
+          [User Guide](https://docs.pdfix.net/user-guide/overview)
+          [PDF Batch Actions Documentation](https://docs.pdfix.net/actions/overview)
+
+          **Downloads:** installers are \`pdfix-desktop-v…\` (\`.msi\` for Windows, \`.dmg\` for macOS, \`.run\` for Linux). Portable packages that run without installation are \`pdfix-desktop-portable-v…\`. On macOS, use \`arm64\` for Apple silicon and \`x86_64\` for Intel.
+          EOF
+
           gh release create "$VERSION" -R "$REPO" --draft --target "$TARGET_BRANCH" \
-            --title "PDFix Desktop $VERSION" --notes ""
+            --title "PDFix Desktop $VERSION" --notes-file "$notes"
           # Remove only the draft this step created if an upload fails, never anything else.
           if ! gh release upload "$VERSION" -R "$REPO" "$RUNNER_TEMP"/assets/*; then
             echo "::error::upload failed - removing the draft this run created"
