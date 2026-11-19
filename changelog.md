@@ -1,6 +1,5 @@
 # PDFix Desktop changelog
 
-# PDFix Desktop
 
 ## [4.0.0] - 2026-11-18
 
