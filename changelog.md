@@ -1,6 +1,50 @@
 # PDFix Desktop changelog
 
 
+## [4.0.1] - 2026-11-25
+
+### Highlights
+
+PDFix Desktop 4.0.1 is a bug-fix release. Tag As is more reliable, PDFix Desktop is available in Open with on Windows, and the bundled veraPDF runs on an updated Java runtime.
+
+- **Reliable Tag As.** Every selected line is tagged, the new tag is selected afterwards, and retagging no longer leaves duplicate MCIDs or empty tags.
+- **Open with on Windows.** Open PDF files in PDFix Desktop from File Explorer, also while it is already running.
+- **Security update.** The bundled veraPDF runs on Temurin 17.0.21.1+2, which fixes CVE-2026-114938.
+
+### Workspace and User Interface
+
+**New**
+- Windows: PDFix Desktop is listed under Open with for PDF files. Your default PDF app does not change.
+
+**Fixed**
+- Windows: opening a file while PDFix Desktop is running opens it in the running instance.
+- The file list no longer freezes when you sort a very large selection of files.
+
+### Accessibility and Tagging
+
+**Fixed**
+- Tag As on a rectangle selection splits every selected line, including the last lines on the page.
+- After Tag As, the new tag is selected, also when several tags are created.
+- Tag As no longer gives one MCID to two tags or leaves a tag without content.
+- Actions on a tag selected in the Tags pane apply to all of its content. For example, Mark as Artifact on a paragraph with two lines now marks both lines. Errors such as a failed Add to Tag are now reported.
+- After Move Up or Move Down, the Tags pane scrolls to the moved tag.
+
+### Actions
+
+**Fixed**
+- AutoTag in Document View is now called AutoTag with Layout Template and uses the template from the Template pane.
+- Compound actions such as Make Accessible show the Template and Preflight options, so a saved Preflight setting no longer runs without you seeing it.
+
+### Validation and veraPDF
+
+**Fixed**
+- The bundled veraPDF runs on Java runtime Temurin 17.0.21.1+2, which fixes security vulnerability CVE-2026-114938.
+
+### General
+
+- Updated translations.
+- Built on [PDFix SDK 10.0.1](https://github.com/pdfix/pdfix_sdk_builds/blob/main/changelog.md#1001---2026-11-25).
+
 ## [4.0.0] - 2026-11-18
 
 ### Highlights
